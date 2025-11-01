@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dream World India — Swipe‑Away Learning Tools</title>
+  <meta name="description" content="Swipe‑Away laminated books, essential workbooks, and custom/bulk printing for schools and publishers. Multilingual learning resources across six Indian languages." />
+  <style>
+    :root{
+      --accent:#8B5E3C; --muted:#666; --bg:#f9f7f4; --card:#fff; --radius:12px;
+      font-family:'Poppins', system-ui, sans-serif;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:#111;line-height:1.45}
+    .container{max-width:1100px;margin:28px auto;padding:20px}
+
+    header{display:flex;gap:16px;align-items:center}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo img{width:72px;height:auto;border-radius:10px}
+    h1{font-size:1.45rem;margin:0;font-weight:700;color:var(--accent)}
+    p.lead{color:var(--muted);margin:6px 0 0}
+    nav{margin-left:auto}
+    nav a{margin-left:14px;text-decoration:none;color:var(--accent);font-weight:600}
+
+    .hero{display:grid;grid-template-columns:1fr 340px;gap:22px;margin-top:18px}
+    .card{background:var(--card);padding:18px;border-radius:var(--radius);box-shadow:0 6px 18px rgba(19,36,63,0.06)}
+    .products-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+
+    .product h3{margin:0 0 6px;color:var(--accent)}
+    .product p{margin:0 0 12px;color:var(--muted)}
+    .btn{display:inline-block;padding:10px 14px;border-radius:10px;background:var(--accent);color:white;text-decoration:none;font-weight:700}
+    .btn-ghost{background:transparent;border:2px solid var(--accent);color:var(--accent)}
+
+    .languages{display:flex;gap:8px;flex-wrap:wrap}
+    .lang{padding:8px 12px;border-radius:10px;background:#fff;border:1px solid #eee;font-weight:600}
+
+    table{width:100%;border-collapse:collapse}
+    th,td{padding:8px;border-bottom:1px solid #f0f0f0}
+
+    footer{text-align:center;color:var(--muted);margin:22px 0}
+
+    @media (max-width:880px){.hero{grid-template-columns:1fr}nav{display:none}}
+
+    form{display:grid;gap:8px}
+    input,textarea,select{padding:10px;border-radius:8px;border:1px solid #e6e6e6}
+    .small{font-size:0.9rem;color:var(--muted)}
+    .modal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,0.35)}
+    .modal .box{width:540px;max-width:92%;padding:18px;border-radius:12px;background:white}
+    .show{display:flex}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo"><img src="logo.png" alt="Dream World India Logo" /></div>
+        <div>
+          <h1>Dream World India</h1>
+          <p class="lead">High-quality swipe-away learning tools • Multilingual • Durable & child-safe</p>
+        </div>
+      </div>
+      <nav>
+        <a href="#products">Products</a>
+        <a href="#languages">Languages</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="card">
+          <h2 id="products">📚 Our Products</h2>
+          <p class="small">Interactive Swipe‑Away Books, Essential Workbooks, and Custom/Bulk Orders for schools & publishers.</p>
+          <div class="products-grid" style="margin-top:14px">
+            <article class="card product">
+              <h3>Interactive Swipe‑Away Books (Our Specialty)</h3>
+              <p>Revolutionary laminated, spiral-bound books where children can trace with a whiteboard marker and wipe clean for endless practice.</p>
+              <ul class="small">
+                <li>Tracing: letters, numbers, shapes</li>
+                <li>Fun activities and practice pages</li>
+                <li>Durable lamination & child-safe inks</li>
+              </ul>
+              <div style="margin-top:10px"><a class="btn" href="#swipe-books">View All Swipe‑Away Books</a></div>
+            </article>
+            <article class="card product">
+              <h3>Essential Workbooks</h3>
+              <p>High-quality, accurately printed school essentials in multiple formats.</p>
+              <ul class="small">
+                <li>Drawing Books</li><li>Rough Books</li><li>Plain Books</li><li>Map Books</li>
+              </ul>
+              <div style="margin-top:10px"><a class="btn-ghost" href="#workbooks">Shop Workbooks</a></div>
+            </article>
+            <article class="card product">
+              <h3>Custom & Bulk Orders</h3>
+              <p>Full-service printing for schools, coaching centres, and publishers.</p>
+              <div style="margin-top:10px"><a class="btn" href="mailto:dwi641006@gmail.com?subject=Request%20Quote">Request a Custom Quote</a></div>
+            </article>
+          </div>
+        </div>
+        <aside class="card" style="height:fit-content">
+          <h3>Quick Actions</h3>
+          <div class="languages">
+            <div class="lang">English</div>
+            <div class="lang">Tamil</div>
+            <div class="lang">Hindi</div>
+            <div class="lang">Kannada</div>
+            <div class="lang">Malayalam</div>
+            <div class="lang">Telugu</div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="card" id="about" style="margin-top:18px">
+        <h2>🏭 About Us — Where Quality Meets Education</h2>
+        <p class="small">Dream World India operates a state-of-the-art press producing durable, engaging learning materials across India.</p>
+      </section>
+
+      <section class="card" id="contact" style="margin-top:18px">
+        <h2>Contact Us</h2>
+        <p class="small">Phone: <strong>+91 97875 91243</strong> • Email: <a href="mailto:dwi641006@gmail.com">dwi641006@gmail.com</a></p>
+      </section>
+    </main>
+
+    <footer>
+      <small>© Dream World India — Educational Printing Excellence</small>
+    </footer>
+  </div>
+</body>
+</html>
