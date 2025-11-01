@@ -4,170 +4,257 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dream World India | Precision Printing & Multilingual Educational Books</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
   <style>
-    :root {
-      --accent: #b87333;
-      --text-dark: #222;
-      --text-light: #555;
-      --bg: #faf9f6;
-      --white: #fff;
-      --radius: 12px;
-    }
+    /* Global Styles */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
+
     body {
-      font-family: "Poppins", sans-serif;
-      background: var(--bg);
-      color: var(--text-dark);
+      font-family: 'Poppins', sans-serif;
       line-height: 1.6;
+      background-color: #fffdf7;
+      color: #333;
     }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    /* Header & Nav */
     header {
-      background: var(--white);
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      background: #fff;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
       position: sticky;
       top: 0;
-      z-index: 100;
+      z-index: 1000;
     }
-    .container {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 20px;
-    }
+
     .nav-bar {
       display: flex;
-      align-items: center;
       justify-content: space-between;
+      align-items: center;
+      padding: 15px 0;
     }
-    .logo h1 {
-      font-size: 1.2rem;
-      color: var(--accent);
-      font-weight: 700;
+
+    .logo img {
+      height: 60px;
+      width: auto;
+      vertical-align: middle;
     }
+
     nav a {
-      text-decoration: none;
-      color: var(--text-dark);
-      margin-left: 18px;
+      margin: 0 10px;
       font-weight: 600;
+      color: #5b3e00;
       transition: color 0.3s;
     }
+
     nav a:hover {
-      color: var(--accent);
+      color: #d18b00;
     }
+
     .cta-nav {
-      background: var(--accent);
-      color: white !important;
+      background: #d18b00;
+      color: #fff !important;
       padding: 8px 14px;
-      border-radius: var(--radius);
+      border-radius: 6px;
     }
+
+    /* Hero */
     .hero {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 30px;
-      align-items: center;
-      padding: 80px 20px;
+      background: linear-gradient(to right, #fff8e1, #fff3cd);
+      padding: 80px 0;
+      text-align: center;
     }
-    .hero-content h1 {
+
+    .hero h1 {
       font-size: 2.2rem;
-      color: var(--accent);
-      margin-bottom: 16px;
+      color: #5b3e00;
+      margin-bottom: 15px;
     }
-    .hero-content p {
-      font-size: 1rem;
-      color: var(--text-light);
-      margin-bottom: 24px;
+
+    .hero p {
+      font-size: 1.1rem;
+      margin-bottom: 25px;
     }
+
     .btn {
       display: inline-block;
-      text-decoration: none;
-      padding: 10px 18px;
-      border-radius: var(--radius);
+      padding: 10px 20px;
+      border-radius: 6px;
       font-weight: 600;
-      transition: all 0.3s;
+      transition: background 0.3s, color 0.3s;
     }
+
     .btn-primary {
-      background: var(--accent);
-      color: white;
+      background: #d18b00;
+      color: #fff;
     }
+
     .btn-primary:hover {
-      opacity: 0.9;
+      background: #b37400;
     }
+
     .btn-secondary {
-      border: 2px solid var(--accent);
-      color: var(--accent);
+      background: #fff;
+      border: 2px solid #d18b00;
+      color: #d18b00;
       margin-left: 10px;
     }
-    .services, .featured-product, .infrastructure, .contact {
-      padding: 80px 20px;
+
+    .btn-secondary:hover {
+      background: #d18b00;
+      color: #fff;
     }
-    h2 {
+
+    /* Services */
+    .services {
+      padding: 60px 0;
+      background: #fff;
       text-align: center;
-      margin-bottom: 40px;
-      font-size: 1.8rem;
-      color: var(--accent);
     }
-    .service-grid, .infra-grid, .contact-grid {
+
+    .services h2 {
+      font-size: 2rem;
+      color: #5b3e00;
+      margin-bottom: 40px;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .service-item {
+      background: #fff8e1;
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+    }
+
+    /* Featured Product */
+    .featured-product {
+      padding: 70px 0;
+      background: #fff3cd;
+      text-align: center;
+    }
+
+    .featured-product h2 {
+      font-size: 2rem;
+      margin-bottom: 30px;
+      color: #5b3e00;
+    }
+
+    .product-details {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .details-text {
+      max-width: 500px;
+    }
+
+    .details-text p {
+      margin-bottom: 20px;
+    }
+
+    /* Infrastructure */
+    .infrastructure {
+      padding: 70px 0;
+      background: #fff;
+      text-align: center;
+    }
+
+    .infrastructure h2 {
+      font-size: 2rem;
+      margin-bottom: 40px;
+      color: #5b3e00;
+    }
+
+    .infra-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 24px;
+      gap: 20px;
     }
-    .service-item, .infra-item {
-      background: var(--white);
+
+    .infra-item {
+      background: #fff8e1;
       padding: 20px;
-      border-radius: var(--radius);
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.07);
     }
-    .featured-product .product-details {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 24px;
-      align-items: center;
+
+    /* Contact */
+    .contact {
+      padding: 70px 0;
+      background: #fff3cd;
     }
-    .featured-product p {
-      color: var(--text-light);
-      margin-bottom: 16px;
-    }
-    .contact-grid {
-      align-items: start;
-    }
-    .contact-details a {
-      color: var(--accent);
-      text-decoration: none;
-      font-weight: 600;
-    }
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-    input, textarea {
-      padding: 10px;
-      border: 1px solid #ddd;
-      border-radius: var(--radius);
-      font-family: inherit;
-    }
-    button {
-      border: none;
-      cursor: pointer;
-    }
-    footer {
-      background: var(--accent);
-      color: white;
+
+    .contact h2 {
       text-align: center;
-      padding: 20px;
-      margin-top: 60px;
-      font-size: 0.9rem;
+      font-size: 2rem;
+      margin-bottom: 40px;
+      color: #5b3e00;
     }
+
+    .contact-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      justify-content: center;
+    }
+
+    .contact-details, .contact-form {
+      flex: 1 1 350px;
+      background: #fff;
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    form button {
+      width: 100%;
+    }
+
+    /* Footer */
+    footer {
+      background: #5b3e00;
+      color: #fff;
+      text-align: center;
+      padding: 20px 10px;
+    }
+
     @media (max-width: 768px) {
-      .hero {
-        grid-template-columns: 1fr;
-        text-align: center;
+      nav a {
+        display: inline-block;
+        margin: 6px 8px;
       }
-      .featured-product .product-details {
-        grid-template-columns: 1fr;
+      .hero h1 {
+        font-size: 1.7rem;
       }
     }
   </style>
@@ -177,7 +264,7 @@
   <header>
     <div class="container nav-bar">
       <div class="logo">
-        <h1>🌟 DWI | Dream World India</h1>
+        <img src="logo.png" alt="Dream World India Logo" />
       </div>
       <nav>
         <a href="#home">Home</a>
@@ -191,16 +278,15 @@
   </header>
 
   <section id="home" class="hero">
-    <div class="hero-content">
-      <h1>Precision Printing Solutions for Education and Industry.</h1>
-      <p>From Reusable Laminated Books to High-Volume Commercial Orders, we deliver quality, speed, and linguistic diversity.</p>
-      <div class="hero-ctas">
-        <a href="#contact" class="btn btn-primary">Request a Custom Quote</a>
-        <a href="#products" class="btn btn-secondary">Shop Educational Books</a>
+    <div class="container">
+      <div class="hero-content">
+        <h1>Precision Printing Solutions for Education and Industry.</h1>
+        <p>From Reusable Laminated Books to High-Volume Commercial Orders, we deliver quality, speed, and linguistic diversity.</p>
+        <div class="hero-ctas">
+          <a href="#contact" class="btn btn-primary">Request a Custom Quote</a>
+          <a href="#products" class="btn btn-secondary">Shop Educational Books</a>
+        </div>
       </div>
-    </div>
-    <div class="hero-image-placeholder">
-      <img src="logo.png" alt="Dream World India" style="max-width:100%; border-radius:12px;">
     </div>
   </section>
 
@@ -231,9 +317,6 @@
         <div class="details-text">
           <p>Give your child the gift of endless practice! Our unique laminated books allow children to <strong>Write, Wipe, and Repeat</strong> without wasting paper. Available in <strong>English, Tamil, Hindi, Kannada, Malayalam, and Telugu.</strong></p>
           <a href="#products" class="btn btn-primary">View Multilingual Collection</a>
-        </div>
-        <div class="product-image-placeholder">
-          <img src="logo.png" alt="Swipe-Away Book Image" style="max-width:100%; border-radius:12px;">
         </div>
       </div>
     </div>
@@ -274,9 +357,9 @@
         <div class="contact-form">
           <h3>Request a Quote</h3>
           <form>
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <input type="tel" placeholder="Phone Number" required>
+            <input type="text" placeholder="Your Name" required />
+            <input type="email" placeholder="Your Email" required />
+            <input type="tel" placeholder="Phone Number" required />
             <textarea placeholder="Tell us about your project (Quantity, Product Type, Deadline)" required></textarea>
             <button type="submit" class="btn btn-primary">Send Inquiry</button>
           </form>
@@ -290,5 +373,6 @@
       <p>&copy; 2025 Dream World India. All rights reserved. | Multilingual Printing Specialists.</p>
     </div>
   </footer>
+
 </body>
 </html>
