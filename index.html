@@ -1,276 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dream World India | Precision Printing & Multilingual Educational Books</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
-  <style>
-    /* Global Styles */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Poppins', sans-serif;
-      line-height: 1.6;
-      background-color: #fffdf7;
-      color: #333;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    .container {
-      width: 90%;
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    /* Header & Nav */
-    header {
-      background: #fff;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
-    .nav-bar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px 0;
-    }
-
-    .logo img {
-      height: 60px;
-      width: auto;
-      vertical-align: middle;
-    }
-
-    nav a {
-      margin: 0 10px;
-      font-weight: 600;
-      color: #5b3e00;
-      transition: color 0.3s;
-    }
-
-    nav a:hover {
-      color: #d18b00;
-    }
-
-    .cta-nav {
-      background: #d18b00;
-      color: #fff !important;
-      padding: 8px 14px;
-      border-radius: 6px;
-    }
-
-    /* Hero */
-    .hero {
-      background: linear-gradient(to right, #fff8e1, #fff3cd);
-      padding: 80px 0;
-      text-align: center;
-    }
-
-    .hero h1 {
-      font-size: 2.2rem;
-      color: #5b3e00;
-      margin-bottom: 15px;
-    }
-
-    .hero p {
-      font-size: 1.1rem;
-      margin-bottom: 25px;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 10px 20px;
-      border-radius: 6px;
-      font-weight: 600;
-      transition: background 0.3s, color 0.3s;
-    }
-
-    .btn-primary {
-      background: #d18b00;
-      color: #fff;
-    }
-
-    .btn-primary:hover {
-      background: #b37400;
-    }
-
-    .btn-secondary {
-      background: #fff;
-      border: 2px solid #d18b00;
-      color: #d18b00;
-      margin-left: 10px;
-    }
-
-    .btn-secondary:hover {
-      background: #d18b00;
-      color: #fff;
-    }
-
-    /* Services */
-    .services {
-      padding: 60px 0;
-      background: #fff;
-      text-align: center;
-    }
-
-    .services h2 {
-      font-size: 2rem;
-      color: #5b3e00;
-      margin-bottom: 40px;
-    }
-
-    .service-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-    }
-
-    .service-item {
-      background: #fff8e1;
-      border-radius: 12px;
-      padding: 25px;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.08);
-    }
-
-    /* Featured Product */
-    .featured-product {
-      padding: 70px 0;
-      background: #fff3cd;
-      text-align: center;
-    }
-
-    .featured-product h2 {
-      font-size: 2rem;
-      margin-bottom: 30px;
-      color: #5b3e00;
-    }
-
-    .product-details {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      gap: 30px;
-    }
-
-    .details-text {
-      max-width: 500px;
-    }
-
-    .details-text p {
-      margin-bottom: 20px;
-    }
-
-    /* Infrastructure */
-    .infrastructure {
-      padding: 70px 0;
-      background: #fff;
-      text-align: center;
-    }
-
-    .infrastructure h2 {
-      font-size: 2rem;
-      margin-bottom: 40px;
-      color: #5b3e00;
-    }
-
-    .infra-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-
-    .infra-item {
-      background: #fff8e1;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.07);
-    }
-
-    /* Contact */
-    .contact {
-      padding: 70px 0;
-      background: #fff3cd;
-    }
-
-    .contact h2 {
-      text-align: center;
-      font-size: 2rem;
-      margin-bottom: 40px;
-      color: #5b3e00;
-    }
-
-    .contact-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 40px;
-      justify-content: center;
-    }
-
-    .contact-details, .contact-form {
-      flex: 1 1 350px;
-      background: #fff;
-      border-radius: 12px;
-      padding: 25px;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.08);
-    }
-
-    form input, form textarea {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 15px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      font-family: 'Poppins', sans-serif;
-    }
-
-    form button {
-      width: 100%;
-    }
-
-    /* Footer */
-    footer {
-      background: #5b3e00;
-      color: #fff;
-      text-align: center;
-      padding: 20px 10px;
-    }
-
-    @media (max-width: 768px) {
-      nav a {
-        display: inline-block;
-        margin: 6px 8px;
-      }
-      .hero h1 {
-        font-size: 1.7rem;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
   <header>
     <div class="container nav-bar">
       <div class="logo">
-        <img src="logo.png" alt="Dream World India logo" />
+        <img src="images/DWI-logo.png" alt="Dream World India Logo" height="50">
       </div>
       <nav>
         <a href="#home">Home</a>
         <a href="#services">Our Printing Services</a>
         <a href="#products">Products</a>
         <a href="#infrastructure">Infrastructure</a>
+        <a href="#portfolio">Our Prints</a>
         <a href="#contact">Contact</a>
         <a href="#contact" class="cta-nav">Request a Quote</a>
       </nav>
@@ -278,7 +28,7 @@
   </header>
 
   <section id="home" class="hero">
-    <div class="container">
+    <div class="container hero-layout">
       <div class="hero-content">
         <h1>Precision Printing Solutions for Education and Industry.</h1>
         <p>From Reusable Laminated Books to High-Volume Commercial Orders, we deliver quality, speed, and linguistic diversity.</p>
@@ -286,6 +36,9 @@
           <a href="#contact" class="btn btn-primary">Request a Custom Quote</a>
           <a href="#products" class="btn btn-secondary">Shop Educational Books</a>
         </div>
+      </div>
+      <div class="hero-image-placeholder">
+        <img src="images/DWI-hero.png" alt="DWI Educational Printing">
       </div>
     </div>
   </section>
@@ -305,18 +58,6 @@
         <div class="service-item">
           <h3>In-House Control (Pre-to-Post Press)</h3>
           <p>End-to-end services guarantee high quality, precision, and quick turnaround times for every project.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="featured-product">
-    <div class="container">
-      <h2>The Swipe-Away Advantage</h2>
-      <div class="product-details">
-        <div class="details-text">
-          <p>Give your child the gift of endless practice! Our unique laminated books allow children to <strong>Write, Wipe, and Repeat</strong> without wasting paper. Available in <strong>English, Tamil, Hindi, Kannada, Malayalam, and Telugu.</strong></p>
-          <a href="#products" class="btn btn-primary">View Multilingual Collection</a>
         </div>
       </div>
     </div>
@@ -342,6 +83,34 @@
     </div>
   </section>
 
+  <section id="portfolio" class="portfolio">
+    <div class="container">
+      <h2>Take a Look at Our Prints</h2>
+      <p>Here are some of the premium printing projects currently handled by <strong>Dream World India</strong>.</p>
+
+      <div class="portfolio-tabs">
+        <button class="tab active" data-category="brochure">Brochure</button>
+        <button class="tab" data-category="flyer">Flyer</button>
+        <button class="tab" data-category="visiting">Visiting Card</button>
+        <button class="tab" data-category="letter">Letter Head</button>
+        <button class="tab" data-category="invitation">Invitation</button>
+      </div>
+
+      <div class="portfolio-gallery">
+        <img src="images/DWI-brochure1.png" alt="DWI Brochure">
+        <img src="images/DWI-brochure2.png" alt="DWI Brochure">
+        <img src="images/DWI-flyer1.png" alt="DWI Flyer">
+        <img src="images/DWI-card1.png" alt="DWI Visiting Card">
+        <img src="images/DWI-letter1.png" alt="DWI Letter Head">
+        <img src="images/DWI-invitation1.png" alt="DWI Invitation">
+      </div>
+
+      <div class="view-more">
+        <a href="#" class="btn btn-primary">View More</a>
+      </div>
+    </div>
+  </section>
+
   <section id="contact" class="contact">
     <div class="container">
       <h2>Contact Us</h2>
@@ -357,9 +126,9 @@
         <div class="contact-form">
           <h3>Request a Quote</h3>
           <form>
-            <input type="text" placeholder="Your Name" required />
-            <input type="email" placeholder="Your Email" required />
-            <input type="tel" placeholder="Phone Number" required />
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <input type="tel" placeholder="Phone Number" required>
             <textarea placeholder="Tell us about your project (Quantity, Product Type, Deadline)" required></textarea>
             <button type="submit" class="btn btn-primary">Send Inquiry</button>
           </form>
